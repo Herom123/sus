@@ -1,0 +1,124 @@
+/* ---- reset ---- */
+:root{
+    --lol: 96px;
+}
+body {
+    margin: 0;
+    background-color: #17182f;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    user-select: none;
+    -webkit-user-drag: none;
+    overflow: hidden;
+  }
+  
+  canvas {
+    display: block;
+    vertical-align: bottom;
+  }
+  
+  
+  /* ---- particles.js container ---- */
+  
+  #particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+.credit{
+    margin: 5;
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+a{
+    color: rgba(255, 255, 255, 0.4);
+    text-decoration: none;
+}:hover{
+    color: rgba(255, 255, 255, 0.33);
+}:active{
+    color: rgba(255, 255, 255, 0.166);
+}
+
+.container{
+    position: absolute;
+    top: 50%;
+    width: 100vw;
+    height: var(--lol);
+    display: inline-block;
+    transform: translateY(-12.5%);
+}
+.container .content span{
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    word-break: break-all;
+    left: 50vw;
+    transform: translateX(-50%);
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 500;
+    color: white;
+    text-align: center;
+}
+.container .content{
+    position: absolute;
+    overflow: hidden;
+    width: 100vw;
+    height: 24px;
+    animation: textShowUp 10s linear;
+}
+.container .sus{
+    transform: rotate(0);
+    top: -50%;
+    left: calc(var(--lol) * -2);
+    position: absolute;
+    background-image: url("sus.png");
+    background-size: cover;
+    background-position: center;
+    background-origin: border-box;
+    width: var(--lol);
+    height: var(--lol);
+    animation: susRolling 2s infinite linear, goin 10s linear;
+
+}
+@keyframes susRolling{
+    100% {transform: rotate(360deg);}
+}
+@keyframes goin{
+    100% {left: calc(var(--lol) + 100vw);}
+}
+@keyframes textShowUp{
+    0% {width: calc(var(--lol) * -1);}
+    100% {width:calc(100vw + var(--lol));;}
+}
+#ClickMe{
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+    background:rgba(0, 0, 0, 0.6);
+    opacity: 100%;
+    transition: 0.1s ease-out;
+}
+#ClickMe span{
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.877);
+    font-size: 24px;
+}
+.help{
+    margin: 5;
+    text-align: right;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: rgba(255, 255, 255, 0.2);
+}
