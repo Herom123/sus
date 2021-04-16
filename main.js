@@ -134,7 +134,7 @@ particlesJS("particles-js", {
 
 	if(minwidth&&maxwidth){
         audio.play();
-    } else {
+    } else if(!maxwidth){
         audio.pause();
     }
 },200);
