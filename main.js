@@ -117,12 +117,6 @@ particlesJS("particles-js", {
   var audio       = document.getElementById('typingSound');
   var ClickMe     = document.getElementById('ClickMe');
 
-  function c(toggle=true){
-    if(toggle) container.style.display="block"
-    else container.style.display="none"
-  }
-
-  c(false)
   audio.load();
   textHolder.innerHTML = textInUrl?textInUrl:"Red Was Not Imposter";
 
